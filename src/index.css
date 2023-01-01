@@ -1,13 +1,79 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(240, 245, 252);
+}
+
+.content {
+  width: 100%;
+  margin-top: 111px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  color: orange;
+  margin: 33px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 11px;
+}
+
+button.active {
+  background-color: white;
+}
+
+.menu {
+  display: grid;
+  gap: 1rem 2rem;
+  width: 90vw;
+  grid-template-columns: 1fr 1fr;
+
+  justify-items: center;
+}
+
+.item {
+  display: flex;
+  max-width: 666px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  margin-right: 11px;
+}
+
+.titlesec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  color: orange;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+  button{
+    margin: 6px;
+  }
+  img{
+    height: 150px;
+    width: 150px;
+  }
 }
